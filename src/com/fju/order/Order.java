@@ -8,7 +8,12 @@ public class Order {
     public Order(int amount, Delivery delivery) {
         this.amount = amount;
         this.delivery = delivery;
-    }public int total(){
-        return (amount+delivery.price);
+    }
+
+    public int total() {
+        if (delivery instanceof ShopeeDelivery) {
+        } else {
+            return (amount + shipFeed);
+        }
     }
 }
